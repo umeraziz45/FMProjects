@@ -33,3 +33,17 @@ body {
 p {
   font-size: 15px;
 }
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Header */
+
+.open-nav {
+  cursor: pointer;
+  /* padding: 0.5em; */
+  border: 0;
+  background: 0;
+  font-size: 2rem;
+}
