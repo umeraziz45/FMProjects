@@ -41,6 +41,10 @@ h1 {
   font-weight: 800;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 /* Header */
 
 .header {
@@ -83,4 +87,34 @@ h1 {
   padding: 0.5em 1.5em;
   font-size: .8rem;
   letter-spacing: .25em;
+}
+
+/* Aside */
+
+.aside {
+  background: #000;
+  color: #fff;
+  padding: 1em;
+  margin: 2em 0;
+}
+
+.aside-title-h2 {
+  color: hsl(5, 85%, 63%);
+}
+
+.aside-section {
+  padding: 1em 0;
+  border-bottom: .5px solid hsl(36, 100%, 99%, 0.5);
+}
+
+.aside-section--last {
+  border-bottom: none;
+}
+
+.aside-text {
+  color: hsl(233, 8%, 79%);
+}
+
+.aside-title {
+  font-weight: 700;
 }
