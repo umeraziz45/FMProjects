@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,11 +20,10 @@
 <body>
 
   <header class="header">
+    .header-nav
     <img src="./assets/images/logo.svg" alt="" class="header-logo">
     <nav class="header-nav">
-      <button class="open-nav">&#9776;</button>
       <ul class="header-nav-list">
-        <button class="close-nav">&times;</button>
         <li class="header-nav-links">Home</li>
         <li class="header-nav-links">New</li>
         <li class="header-nav-links">Popular</li>
@@ -35,9 +37,10 @@
     <div class="main-content">
       <img src="./assets/images/image-web-3-mobile.jpg" class="main-img" alt="different shaped and coloured blocks assorted in random order"></img>
       <h1 class="main-title">  The Bright Future of Web 3.0?</h1>
-      <p class="main-text"> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-        But is it really fulfilling its promise?</p>
-      <button class="header-button button">READ MORE</button>
+      <div class="main-content--flex">
+        <p class="main-text"> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+        <button class="header-button button">READ MORE</button>
+      </div>
     </div>
     <aside class="aside">
       <h2 class="aside-title">New</h2>
