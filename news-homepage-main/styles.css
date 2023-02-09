@@ -33,7 +33,7 @@ body {
 }
 
 p {
-  font-size: 15px;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -89,7 +89,7 @@ h2 {
 .main-button {
   margin: 1.5em 0;
   border: 0;
-  background: hsl(35, 77%, 62%);
+  background: hsl(9, 77%, 62%);
   color: #fff;
   padding: 1em 2em;
   font-size: .8rem;
@@ -142,7 +142,7 @@ h2 {
 
   .main-content {
     margin-right: 2em;
-    width: 66%;
+    width: 80%;
   }
 
   .main-img {
@@ -182,7 +182,7 @@ h2 {
   }
 
   .aside-section {
-    padding: 2em 0;
+    padding: 3em 0;
   }
 
   .aside-title {
@@ -213,6 +213,20 @@ h2 {
 
 .list-title {
   font-weight: 700;
+}
+
+/* List Media Queries */
+
+@media (min-width: 1024px) {
+  .list {
+    display: flex;
+    margin: 3em 0;
+    margin-bottom: 5em;
+  }
+
+  .list-span {
+    font-size: 3rem;
+  }
 }
 
 /* footer */
