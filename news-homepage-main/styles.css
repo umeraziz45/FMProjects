@@ -54,28 +54,118 @@ h2 {
 
 .header {
   display: flex;
+  position: relative;
+}
+
+.header-nav {
+  /* display: none; */
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  height: 100%;
+  transform: translate(100%);
+  transition: transform 400ms ease-in-out;
 }
 
 .header-nav-list {
-  display: flex;
   list-style: none;
+  margin-top: 8em;
+  margin-right: 5em;
 }
 
-.open-nav {
-  cursor: pointer;
-  /* padding: 0.5em; */
-  border: 0;
-  background: 0;
-  font-size: 2rem;
-  margin-left: auto;
+.header-nav-links {
+  margin: 0 1.5em;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+/*  Hamburger Icon */
+
+.nav-toggle:checked ~ .header-nav {
+  transform: translate(0%);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span::after,
+.nav-toggle-label span,
+.nav-toggle-label span::before {
+  display: block;
+  background: #000;
+  width: 2em;
+  height: 2px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::after {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::before {
+  top: 7px;
+}
+
+.header-x-check:checked ~ .header-nav {
+  transform: translate(90%) !important;
+}
+
+.header-x-check {
+  display: none;
+}
+
+.header-x {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1em;
+  top: .5em;
 }
 
 /* Header - Desktop Media Query */
 
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3em 0;
+  }
+
+  .header-nav {
+    width: 40%;
+  }
+
+  .header-nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
 /* Main */
 
 .main-img {
-  margin: .5em 0;
+  margin: .5em auto;
+  width: 100%;
 }
 
 .main-title {
@@ -175,6 +265,8 @@ h2 {
 
   .aside {
     margin: 0;
+    overflow: auto;
+    height: fit-content;
   }
 
   .aside-title-h2 {
@@ -182,7 +274,7 @@ h2 {
   }
 
   .aside-section {
-    padding: 3em 0;
+    padding: 1.5em 0;
   }
 
   .aside-title {
@@ -190,7 +282,7 @@ h2 {
   }
 
   .aside-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -215,13 +307,16 @@ h2 {
   font-weight: 700;
 }
 
+.list-img {
+  object-fit: contain;
+}
+
 /* List Media Queries */
 
 @media (min-width: 1024px) {
   .list {
     display: flex;
-    margin: 3em 0;
-    margin-bottom: 5em;
+    margin: 1em 0;
   }
 
   .list-span {
