@@ -125,10 +125,6 @@ h2 {
   top: 7px;
 }
 
-.header-x-check:checked ~ .header-nav {
-  transform: translate(90%) !important;
-}
-
 .header-x-check {
   display: none;
 }
@@ -147,16 +143,29 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 3em 0;
+    margin: 2.5em 0;
   }
 
   .header-nav {
-    width: 40%;
+   position: unset;
+   transform: translate(0%);
+  }
+
+  .nav-toggle-label {
+    display: none;
   }
 
   .header-nav-list {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .header-nav-links {
+    margin-bottom: 0;
+    padding-top: 1em;
+    font-size: 1.2rem;
   }
 
 }
@@ -317,6 +326,7 @@ h2 {
   .list {
     display: flex;
     margin: 1em 0;
+    margin-top: 0;
   }
 
   .list-span {
